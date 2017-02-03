@@ -1,0 +1,7 @@
+---
+region: us-east-1
+access_key: eggseggseggseggs
+secret_key: spamspamspamspam
+whitelist:
+  - i-abcdefgh
+  - i-ijklmnop
