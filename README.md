@@ -18,13 +18,11 @@ Run the following commands as root.
 yum install -y python-pip
 pip install boto
 ```
-
 2. Clone this repo
 
 ```bash
 git clone https://github.com/jason-callaway/nightly-shutdown
 ```
-
 3. Put the [nightly-shutdown.yml](nightly_shutdown.yml) config file in 
 ```/etc```. Don't forget to change mode and ownership to root-only to protect 
 your access and secret keys.
@@ -34,7 +32,6 @@ cp nightly-shutdown/nightly-shutdown.yml /etc
 chown root:root /etc/nightly-shutdown.yml
 chmod 600 /etc/nightly-shutdown.yml
 ```
-
 4. Add your access and secret keys to the config file. White list any instances
 you'd like to opt-out of the nightly shutdown.
 
@@ -46,7 +43,6 @@ whitelist:
   - i-abcdefgh
   - i-ijklmnop
 ```
-
 5. Copy the [utility](nightly_shutdown.py) to cron.daily.
 
 ```bash
