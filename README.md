@@ -10,17 +10,19 @@ not in the whitelist in [nightly-shutdown.yml](nightly_shutdown.yml).
 
 ## How to use it
 
+Run the following commands as root.
+
 1. Ensure [boto](https://github.com/boto/boto) is installed.
 
 ```bash
-[root@yourhost ~]# yum install -y python-pip
-[root@yourhost ~]# pip install boto
+yum install -y python-pip
+pip install boto
 ```
 
 2. Clone this repo
 
 ```bash
-[root@localhost ~]# git clone https://github.com/jason-callaway/nightly-shutdown
+git clone https://github.com/jason-callaway/nightly-shutdown
 ```
 
 3. Put the [nightly-shutdown.yml](nightly_shutdown.yml) config file in 
@@ -28,9 +30,9 @@ not in the whitelist in [nightly-shutdown.yml](nightly_shutdown.yml).
 your access and secret keys.
 
 ```bash
-[root@localhost ~]# cp nightly-shutdown/nightly-shutdown.yml /etc
-[root@localhost ~]# chown root:root /etc/nightly-shutdown.yml
-[root@localhost ~]# chmod 600 /etc/nightly-shutdown.yml
+cp nightly-shutdown/nightly-shutdown.yml /etc
+chown root:root /etc/nightly-shutdown.yml
+chmod 600 /etc/nightly-shutdown.yml
 ```
 
 4. Add your access and secret keys to the config file. White list any instances
@@ -48,7 +50,6 @@ whitelist:
 5. Copy the [utility](nightly_shutdown.py) to cron.daily.
 
 ```bash
-[root@localhost ~]# cp nightly-shutdown/nightly-shutdown.py \ 
-  /etc/cron.daily/nightly-shutdown
-[root@localhost ~]# chmod 755 /etc/cron.daily/nightly-shutdown
+cp nightly-shutdown/nightly-shutdown.py /etc/cron.daily/nightly-shutdown
+chmod 755 /etc/cron.daily/nightly-shutdown
 ```
